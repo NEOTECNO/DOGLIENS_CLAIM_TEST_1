@@ -36,8 +36,8 @@ body {
   margin: 0;
   min-width: 320px;
   width: 100%;
+  height: 100%;
   background: #000000;
-  color: #ffffff;
 }
 
 input,
@@ -360,6 +360,19 @@ body {
   flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
+  background: url('/images/market_2.png');
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.wrapper2 {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #000000;
 }
 
 .container {
@@ -368,14 +381,14 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 20px;
   width: 80vw;
+  height: 100%;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  background: #00000054;
+  background: #00000079;
   -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 	        animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
@@ -422,9 +435,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 60px;
-  color: #ff0000;
+  font-size: 48px;
+  color: #00ff00;
+  filter: drop-shadow(0px 0px 3px #79ff80);
+  -webkit-filter: drop-shadow(0px 0px 3px #79ff80);
 }
 
 .typed-cursor {
@@ -437,16 +451,16 @@ body {
 .header__center {
   display: flex;
   flex-direction: row;
-  filter: drop-shadow(0px 0px 8px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 8px #79ff80);
+  filter: drop-shadow(0px 0px 8px #ff0000);
+  -webkit-filter: drop-shadow(0px 0px 8px #ff0000);
 }
 
 .header__right {
   display: flex;
   flex-direction: row;
   right: 0px;
-  filter: drop-shadow(0px 0px 8px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 8px #79ff80);
+  filter: drop-shadow(0px 0px 8px #ff0000);
+  -webkit-filter: drop-shadow(0px 0px 8px #ff0000);
 }
 
 .head-twitter {
@@ -518,7 +532,7 @@ body {
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
-  border-color: #8fff79;
+  border-color: #ff4c4c;
   background-color: #000000;
   text-align: center;
   font-weight: 700;
@@ -542,7 +556,7 @@ body {
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
-  border-color: #8fff79;
+  border-color: #ff0000;
   background-color: #000000;
   text-align: center;
   font-weight: 700;
@@ -566,25 +580,12 @@ body {
   padding-top: 10px;
   -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
-  background: url('/images/market_8.png');
-  background-color: #000000;
-	background-position: center;
-	background-size: contain;
-  background-repeat: no-repeat;
 }
 .main2 {
   flex: 1 1 auto;
   height: 84vh;
-  padding-top: 10px;
   -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
-  background: url('/images/market_2.png');
-  background-color: #000000;
-	background-position: center;
-	background-size: cover;
-  background-repeat: no-repeat;
 }
 .main3 {
   flex: 1 1 auto;
@@ -605,7 +606,7 @@ body {
   position: relative;
   width: 80vw;
   height: 82vh;
-  justify-content: center;
+  justify-content: right;
   border-radius: 10px;
   background: #00000000;
   padding-top: 10px;
@@ -678,10 +679,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 10px;
   padding: 20px;
-  width: 70%;
+  width: 50%;
   background: #0000004d;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -777,8 +778,8 @@ body {
   font-size: calc(50px + 30 * (100vw / 1920));
   color: #ffffff;
   font-weight: 800;
-  filter: drop-shadow(0px 0px 8px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 8px #79ff80);
+  filter: drop-shadow(0px 0px 8px #ff3a3a);
+  -webkit-filter: drop-shadow(0px 0px 8px #ff3a3a);
 }
 
 .form-text {
@@ -794,6 +795,15 @@ body {
   font-size: 20px;
   color: #00ff00;
   font-weight: 700;
+  filter: drop-shadow(0px 0px 2px #000000);
+  -webkit-filter: drop-shadow(0px 0px 2px #000000);
+}
+
+.form-text-3 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 10px;
   filter: drop-shadow(0px 0px 2px #000000);
   -webkit-filter: drop-shadow(0px 0px 2px #000000);
 }
@@ -827,9 +837,9 @@ body {
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
-  border-color: #8fff79;
-  filter: drop-shadow(0px 0px 8px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 8px #79ff80);
+  border-color: #ff4c4c;
+  filter: drop-shadow(0px 0px 8px #ff3434);
+  -webkit-filter: drop-shadow(0px 0px 8px #ff3434);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -872,7 +882,7 @@ body {
   height: 50px;
   width: fit-content;
   text-align: center;
-  background-color: #000000;
+  background: linear-gradient(180deg, rgba(255,79,79,1) 0%, rgba(255,64,64,1) 0%, rgba(0,0,0,1) 100%);
   padding: 2px 40px;
   transition: all 0.4s ease 0s;
   margin-bottom: 10px;
@@ -882,17 +892,17 @@ body {
   color: #ffffff;
   border-style: solid;
   border-width: 1px;
-  border-color: #8fff79;
+  border-color: #ff4c4c;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-  filter: drop-shadow(0px 0px 8px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 8px #79ff80);
+  filter: drop-shadow(0px 0px 8px #ff2e2e);
+  -webkit-filter: drop-shadow(0px 0px 8px #ff2e2e);
 }
 .btn-form:hover {
-  background-color: #ffffff;
+  background: #ffffff;
   color: #000000;
 }
 
@@ -902,7 +912,7 @@ body {
   text-align: center;
   border-style: solid;
   border-width: 1px;
-  border-color: #6dff6d;
+  border-color: #ff4a4a;
   border-radius: 25px;
   background-color: #000000;
   transition: all 0.4s ease 0s;
@@ -911,13 +921,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #48ff00;
+  color: #ffffff;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
-  filter: drop-shadow(0px 0px 4px #71ff55);
-  -webkit-filter: drop-shadow(0px 0px 4px #71ff55);
+  filter: drop-shadow(0px 0px 4px rgb(255, 44, 44));
+  -webkit-filter: drop-shadow(0px 0px 4px rgb(255, 44, 44));
 }
 .btn-2:hover {
   background-color: #ffffff;
