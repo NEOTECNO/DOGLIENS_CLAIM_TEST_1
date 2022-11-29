@@ -19,6 +19,7 @@ var contract1 = null;
 var contract2 = null;
 var contract3 = null;
 var price = null;
+var approved = "";
 
 var totalSupply = null;
 var maxSupply = null;
@@ -39,6 +40,46 @@ const incrementMintAmount = async (e) => {
 	if (newMintAmount > maxPerTx) { newMintAmount = maxPerTx; }
 	document.getElementById('tokens_amount').value = newMintAmount;
   };
+
+//APPROVE YOUR WALLET
+const approve = async (e)=> {
+	if (typeof window.ethereum !== 'undefined') {
+		if (account.length > 0) {
+			var success = "";
+			document.getElementById("approve").innerHTML = "WORKING..."
+			try {
+	  			const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+				account = accounts[0];
+
+				document.getElementById("connect_button").innerHTML = account.substr(0,10) + "..." + account.substr(-4);
+  
+				const web3 = new Web3(window.ethereum);
+				contract3 = new web3.eth.Contract(abi_disc, CONTRACT_DISC, { from: account });
+				allowance = await contract3.methods.allowance(account, CONTRACT_STAKING).call();
+				allowanceValue = BigInt("6000000000000000000000");
+
+				if (allowance > 0) {
+					alert("Disc balance approved!");
+					console.log("Disc balance approved!");
+					document.getElementById("approve").innerHTML = "BALANCE APPROVED";
+					}
+				else
+					{
+					await contract3.methods.approve(CONTRACT_STAKING, allowanceValue).send({from: account});
+					alert("Disc balance approved!");
+					console.log("Disc balance approved!");
+					success = document.getElementById("approve").innerHTML = "BALANCE APPROVED";
+					}
+				}
+			catch(e)
+				{
+				alert("Error: " + e.message)
+				console.log("Error: ",e)
+		  		document.getElementById("approve").innerHTML = "Approve DISC";
+		  		}
+			}
+		}
+	}
 
 //GET DISC BALANCE
 const get_disc_balance = async (e)=> {
@@ -69,8 +110,9 @@ const get_key_balance = async (e)=> {
   	  		const web3 = new Web3(window.ethereum);
 			contract2 = new web3.eth.Contract(abi_staking, CONTRACT_STAKING, {gas: 30000000});
 			var key_balance = await contract2.methods.addressKeyBalance(account).call();
+			var extrakey_balance = await contract2.methods.VIP_KEYS(account).call();
 
-			document.getElementById("key_balance").innerHTML = "KEY BALANCE: " + key_balance;
+			document.getElementById("key_balance").innerHTML = "KEY BALANCE: " + key_balance + " (Regular)" + " + " + extrakey_balance + " (Extra)";
 			}
   		}
   	return false;
@@ -256,7 +298,6 @@ const connect = async (e)=> {
 
     	//document.getElementById("tokens_available").innerHTML = "SOLD OUT";
 	  	document.getElementById("tokens_available").innerHTML = totalSupply + " / " + "500";
-	  	document.getElementById("price").innerHTML = "1 KEY + ETH";
     	//document.getElementById('tokens_amount').value = maxPerTx;
 	  	}
 		else { document.getElementById("connect_button").innerHTML = "Connect wallet"; }
@@ -267,6 +308,8 @@ const connect = async (e)=> {
   return false;
 }
 
+//BUTTON FUNCTIONS
+document.getElementById('approve').onclick = approve;
 document.getElementById('connect_button').onclick = connect;
 
 connect();

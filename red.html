@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title> DOGLIENS STAKING DAPP </title>
-    <meta name="description" content="DOGLIENS STAKING DAPP">
+    <title> HEADACHE'S ARMY </title>
+    <meta name="description" content="HEADACHE'S ARMY">
     <meta property="og:image" content="/img/other_tag.jpg">
     <link rel="stylesheet" href="css/css-style2.css">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
@@ -20,7 +20,7 @@
                 <div class="header__row">
 
                     <div class="header__logo">
-                        <img src="images/img-logo2.png" alt="logo site">
+                        <img src="images/img-logo4.png" alt="logo site">
                     </div>
 
                     <!--
@@ -37,6 +37,7 @@
                     </div>
 
                     <div class="header__right">
+                        <button class="btn-head" id="approve"> Approve DISC </button>
                         <button class="btn-head" id="connect_button"> Connect wallet </button>
                     </div>
 
@@ -53,10 +54,10 @@
                         <div class="form-row-top">
 
                             <div class="form-row-top-left">
-                                <p class="form-text"> TOTAL MINTED </p> 
+                                <p class="form-text"> HEADACHE ARMY DELIVERED </p> 
                                 <p class="number" id="tokens_available"> CONNECT </p> 
                                 <p class="form-text-3" id="phase"> HEADACHE'S ARMY IS HERE! </p> 
-                                <p class="form-text-3" id="price"> COST 1 KEY + 0.1 ETH </p>
+                                <p class="form-text-3" id="price"> COST 1 KEY + ETH EACH </p>
                                 <p class="form-text-3" id="disc_balance"> DISC BALANCE: </p>
                                 <p class="form-text-3" id="key_balance"> KEY BALANCE: </p>
                             </div>
@@ -66,18 +67,22 @@
                             </div>
                         </div>
 
+                        <div class="form-row-mint">
+                            <button class="btn-form" id="mint_key"> EXCHANGE DISC FOR KEYS </button>
+                        </div>
+
                         <div class="form-row-amount">
                             <button class="btn-2" id="mintDW" onClick="decrementMintAmount()"> - </button>
-                                <input type="text" placeholder="mint amount" class="in-form js-in-number" id="tokens_amount">
+                                <input type="text" placeholder="max 5 per transaction" class="in-form js-in-number" id="tokens_amount">
                             <button class="btn-2" id="mintUP" onClick="incrementMintAmount()"> + </button>
                         </div>
 
                         <div class="form-row">
 
                             <div class="form-row-mint">
-                                <button class="btn-form" id="mint_key"> EXCHANGE DISC FOR KEYS </button>
-                                <button class="btn-form" id="mint_common_headache"> HEADACHE'S ARMY MINT (DISCOUNTED) </button>
+                                <button class="btn-form" id="mint_common_headache"> HEADACHE'S ARMY MINT (DISCOUNTED) </button><br>
                                 <button class="btn-form" id="mint_vip_headache"> HEADACHE'S ARMY MINT (EXTRA KEY) </button>
+                                (Only use this option if you have been sent a Extra Key)
                                 <!--
                                 <button class="btn-form" id="mint_full_eth_headache"> FULL ETH </button>
                                 -->
@@ -111,6 +116,7 @@
 	<script src="js_2/dist-web3.min.js"></script>
     <script src="js_2/7663-js-sale.js"></script>
     <script src="js_2/8305-js-main.js"></script>
+    <script src="node_modules/bignumber.js/"></script>
 
 </body>
 
