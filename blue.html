@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DOGLIENS STAKING DAPP </title>
+    <meta name="description" content="DOGLIENS STAKING DAPP">
+    <meta property="og:image" content="/img/other_tag.jpg">
+    <link rel="stylesheet" href="css/css-style2.css">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="icon" href="./icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+
+                    <div class="header__logo">
+                        <img src="images/img-logo2.png" alt="logo site">
+                    </div>
+
+                    <div class="header__logo2">
+                        DOGLIENS RESCUE
+                    </div>
+
+                    <div class="header__center">
+                        <a href="https://etherscan.io/address/0x5b0d643def5fa4b07c37dc5e5c9faacc0e1422ea" target="_blank" class="head-etherscan"></a>
+                        <a href="https://opensea.io/collection/dogliens" target="_blank" class="head-opensea"></a>
+                        <a href="https://twitter.com/DOGLIENS" target="_blank" class="head-twitter"></a>
+                        <a href="https://discord.gg/DOGLIENS" target="_blank" class="head-discord"></a>
+                    </div>
+
+                    <div class="header__right">
+                        <button class="btn-head" id="connect_button"> Connect wallet </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="main3">
+            <div class="container">
+                <div class="main__row">
+
+                    <div class="main_left_2">
+                        <p class="form-text"> TOTAL MINTED </p> 
+                        <p class="number" id="tokens_available"> CONNECT </p> 
+                        <p class="form-text" id="phase"> DOGLIENS RESCUE! </p> 
+                        <p class="form-text" id="price"> COST 1 KEY + 0.1 ETH </p> <br>
+                        
+                        <div class="form-row">
+
+                            <div class="form-row-amount">
+                                <button class="btn-2" id="mintDW" onClick="decrementMintAmount()"> - </button>
+                                    <input type="text" placeholder="mint amount" class="in-form js-in-number" id="tokens_amount">
+                                <button class="btn-2" id="mintUP" onClick="incrementMintAmount()"> + </button>
+                            </div>
+
+                            <div class="form-row-mint">
+                                <button class="btn-form" id="mint_button"> Mint </button>
+                            </div>
+
+                        </div><br>
+                            
+                        <div class="form-row-text">
+                            <div class="form-text">                        
+                                <p> "OPTION 1: Use 1 COMMON KEY + 0.05 ETH to rescue one Doglien NFT." </p>
+                                <br>
+                                <p> "OPTION 2: Use 1 VIP KEY + 0.05 ETH to claim one extra Doglien NFT without limits." </p>
+                                <br>
+                                <p> "OPTION 3: Buy one Doglien NFT at 0.1 ETH." </p>
+                                <br>
+                                <p> Temp text <a href="https://opensea.io/collection/nowhere-near-degen-bombs" target="_blank"> DOGLIEN </a> template! </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main_right_2">
+                        <img src="images/blue_box.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="text-center copyright">
+                        <span> © 2022 DOGLIENS. All rights reserved </span>
+                      </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+	<script src="js/dist-web3.min.js"></script>
+    <script src="js/7663-js-sale.js"></script>
+    <script src="js/8305-js-main.js"></script>
+
+</body>
+
+</html>
